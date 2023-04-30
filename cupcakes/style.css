@@ -110,7 +110,7 @@ nav a{
 
 nav a:hover{
     text-decoration: none;
-    color: red;
+    color: rgba(201, 3, 164, 0.8);
 }
 
 nav ul {
@@ -162,13 +162,43 @@ nav ul {
 }
 
 #search-icon:hover {
-    color: red;
+    color: rgba(201, 3, 164, 0.8);
 }
 
 /* Slideout Menu */
 
 #slideout-menu {
     display: none;
+    background-color: #2d3436;
+    z-index: 100;
+    position: fixed;
+    transition: 0.4s;
+    margin-top: 72px;
+    width: 100%;
+    text-align: center;
+}
+
+#slideout-menu ul {
+    list-style: none;
+    padding: 8px;
+}
+
+#slideout-menu li {
+    padding: 8px;
+}
+
+#slideout-menu a {
+    font-family: 'Ysabeau Condensed', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+#slideout-menu input {
+    width: 85%;
+    padding: 8px;
+    font-family: 'Ysabeau Condensed', sans-serif;
+    font-size: 20px;
+    text-align: center;
 }
 
 /* Sections */
@@ -189,7 +219,7 @@ section {
     padding: 4px 32px;
 }
 
-.section-heading {
+.section-heading:hover {
     padding: 4px 48px;
     background-color: rgba(86, 3, 71, 0.8);
     color: white;
@@ -219,7 +249,108 @@ section {
     padding: 0 8px;
  }
 
+ /* Button Read More */
+
+ .btn-readmore {
+    padding: 8px 24px;
+    border: 3px solid black;
+    transition: 0.4s;
+    display: inline-block;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+ }
+
+ .btn-readmore:hover {
+    background-color: rgba(201, 3, 164, 0.8);
+    text-decoration: none;
+    padding: 8px 64px 8px 24px;
+    color: white;
+ }
+
+ /* Footer */
+ footer {
+    background-color: #202125;
+    padding: 8px;
+    color: #eee;
+    display: flex;
+ }
+
+ footer a {
+    color: white;
+ }
+
+ footer #left-footer {
+    flex: 1;
+    border-right: 1px solid rgba(201, 3, 164, 0.8);
+    padding-left: 32px;
+ }
+
+ footer #footer-left ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.5;
+ }
+
+ footer #right-footer {
+    flex: 2;
+    padding: 8px;
+    text-align: center;
+ }
+
+ footer #social-media-footer a .fa-facebook,
+ footer #social-media-footer a .fa-youtube,
+ footer #social-media-footer a .fa-github {
+    color: white;
+    transition: 0.4s;
+ }
+
+ footer #social-media-footer ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+ }
+
+ footer #social-media-footer ul li {
+    font-size: 40px;
+    padding: 15px;
+    transition: 0.4s;
+ }
+
+ footer #social-media-footer ul li:hover a .fa-youtube {
+    color: red;
+ }
+
+ footer #social-media-footer ul li:hover a .fa-facebook {
+    color: #3b5998;
+ }
+
+ footer #social-media-footer ul li:hover a .fa-github{
+    color: #bbb;
+ }
+
+
  /* Media Queries */
+ @media (min-width: 900px) {
+    nav ul {
+        display: none;
+    }
+
+    #menu-icon {
+        display: flex;
+    }
+
+    #slideout-menu {
+        /*display: block;*/
+    }
+
+    #searchbox {
+        display: none;
+    }
+ }
 
  @media (min-width: 720px) {
     main {
@@ -230,5 +361,11 @@ section {
     }
     .card .card-image img {
         width: 100%;
+    }
+ }
+
+ @media (min-width: 1200px) {
+    main {
+        width: 85%;
     }
  }
