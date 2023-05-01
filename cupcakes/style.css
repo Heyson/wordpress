@@ -334,6 +334,33 @@ section {
     color: #bbb;
  }
 
+ /* Blog List page */
+ .page-heading {
+    font-size: 32px;
+    font-family: 'Ysabeau Condensed', sans-serif;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    transition: all 0.4s;
+    display: inline-block;
+    padding: 4px 32px;
+    margin-top: 120px;
+ }
+
+ .page-heading:hover {
+    padding: 4px 48px;
+    background-color: rgba(201, 3, 164, 0.8);
+ }
+.card-meta {
+    color:#333;
+    font-size: 14px;
+    padding-left: 8px;
+    font-family: 'Ysabeau', sans-serif;
+}
+
+.card-meta a {
+    color: #333;
+}
+
 
  /* Media Queries */
  @media (max-width: 900px) {
